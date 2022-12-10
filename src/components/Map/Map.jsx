@@ -60,7 +60,7 @@ const createDataLayerFromJSON = (mapInstance, data) => {
   })
 }
 
-export const Map = () => {
+export default function Map(){
     const map = useRef(null);
     const mapContainer = useRef(null);
     const [lng, setLng] = useState(-83.04);

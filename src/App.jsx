@@ -2,8 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import crimeData from './features/api/crimeData.json'
 import {Box, Card, Container, Grid} from '@mui/material'
-import {Map} from './components/Map/Map'
-
+import Map from './components/Map/Map'
+import CrimeBarChart from './components/CrimeBarChart/CrimeBarChart'
 // address: "Greenfield Rd & Westfield St"
 // ​​​​
 // arrest_charge: "12000"
@@ -58,9 +58,9 @@ function App() {
       <Grid container>
         <Grid xs={12} item>
           <Box>
-            <Map />
+            <CrimeBarChart />
           </Box>
-        </Grid>
+        </Grid> 
       </Grid>
     </Container>
   )
