@@ -56,7 +56,12 @@ function App() {
   return (
     <Container maxWidth="fluid">
       <Grid container>
-        <Grid xs={12} item>
+        <Grid xs={6} item>
+          <Box>
+            <Map />
+          </Box>
+        </Grid> 
+        <Grid xs={6} item>
           <Box>
             <CrimeBarChart />
           </Box>

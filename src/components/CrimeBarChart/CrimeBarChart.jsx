@@ -1,8 +1,7 @@
 import React from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { Box, Card} from '@mui/material';
 // import crimeData from '../../features/api/crimeData.json'
-
-import { Box, Card, Typography } from '@mui/material';
 
 // const barChartData = crimeData.features.map((crime, i) => ({
 //   offense_category:crime.attributes.offense_category,
@@ -14,7 +13,6 @@ import { Box, Card, Typography } from '@mui/material';
 // ))
 
 // const offenseCategories = [...new Set(offenseCategories_raw)]
-
 
 const crimeStats = [
   {
@@ -60,26 +58,10 @@ const crimeStats = [
   
 ]
 
-
-
-
-const data = [
-  {
-    name: 'Robbery',
-    uv:200,
-    pv:400,
-  },
-  {
-    name: 'Page B',
-    uv: 300,
-    pv: 398,
-  }
-];
-
 export default function CrimeBarChart(){
   return (
-    <Box p={5}>
-      <Card sx={{paddingTop:5, paddingBottom:5, height:'400px'}} elevation={5}>
+    <Box>
+      <Card sx={{ height:'400px'}} elevation={0}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             width={500}

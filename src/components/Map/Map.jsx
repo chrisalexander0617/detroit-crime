@@ -6,6 +6,7 @@ import mapboxgl from 'mapbox-gl';
 import {createDataLayer} from './functions'
 import crimeData from '../../features/api/crimeData.json'
 mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_API_TOKEN
+import {Box} from '@mui/material'
 
 const crimeDataLayer = crimeData.features.map((crime, i) => (
   {
@@ -113,12 +114,12 @@ export default function Map(){
     })
 
     return (
-        <>
+        <Box>
             <div 
-                style={{height:'100vh', width:'800px', maxWidth:'100%', minWidth:'100%' }} 
+                style={{height:'400px', width:'800px', maxWidth:'100%', minWidth:'100%' }} 
                 ref={mapContainer} 
                 className="map-container"
             ></div>
-        </>
+        </Box>
     ) 
 }
