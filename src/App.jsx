@@ -4,6 +4,10 @@ import crimeData from './features/api/crimeData.json'
 import {Box, Card, Container, Grid} from '@mui/material'
 import Map from './components/Map/Map'
 import CrimeBarChart from './components/CrimeBarChart/CrimeBarChart'
+import CrimePieChart from './components/CrimePieChart/CrimePieChart'
+
+import axios from 'axios'
+
 // address: "Greenfield Rd & Westfield St"
 // ​​​​
 // arrest_charge: "12000"
@@ -48,24 +52,20 @@ import CrimeBarChart from './components/CrimeBarChart/CrimeBarChart'
 // ​​​​
 // year: 2021
 
-
 function App() {
   const [count, setCount] = useState(0)
-  console.log(crimeData.features)
 
   return (
-    <Container maxWidth="fluid">
-      <Grid container>
-        <Grid xs={6} item>
-          <Box>
+    <Container maxWidth="xxl">
+      <Grid container spacing={5}>
+        <Grid xs={12} item>
             <Map />
-          </Box>
         </Grid> 
-        <Grid xs={6} item>
+        <Grid xs={12} item>
           <Box>
             <CrimeBarChart />
           </Box>
-        </Grid> 
+        </Grid>
       </Grid>
     </Container>
   )

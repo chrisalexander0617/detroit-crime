@@ -116,7 +116,7 @@ export default function Map(){
     return (
         <Box>
             <div 
-                style={{height:'400px', width:'800px', maxWidth:'100%', minWidth:'100%' }} 
+                style={{height:'500px', width:'800px', maxWidth:'100%', minWidth:'100%' }} 
                 ref={mapContainer} 
                 className="map-container"
             ></div>
