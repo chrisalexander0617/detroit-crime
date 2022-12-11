@@ -1,7 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Box, Card} from '@mui/material';
-import axios from 'axios'
 import CircularProgress from '@mui/material/CircularProgress';
 import crimeData from '../../features/api/crimeData.json'
 
@@ -20,7 +19,6 @@ const crimeStats = offenseCategories.map(offense => ({
   name:offense,
   value:barChartData.filter(crime => crime.offense_category === offense).length
 }))
-
 
 export default function CrimeBarChart(){
   const mounted = useRef(false)
